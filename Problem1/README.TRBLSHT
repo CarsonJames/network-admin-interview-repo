@@ -1,0 +1,8 @@
+#Steps in troubleshooting Problem1:
+
+#1. Log in to Server
+#2. Review Ethernet Config
+#3. Review /var/log/messages
+#4. Determined that server is using DHCP.  In my experience Static IPs should be used for servers.
+#5. DHCP renewal taking place every ~30 min.  This would cause connectivity issues.
+#6. To resolve, exclude 10.0.0.61/24 from DHCP pool, and assign statically to server.
